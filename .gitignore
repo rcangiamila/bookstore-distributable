@@ -1,8 +1,28 @@
-.DS_Store
-target
+target/
+
+### STS ###
+.apt_generated
 .classpath
-.settings
+.factorypath
 .project
-.tern-project
-.settings/*
-!.settings/.jsdtscope
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+out
+gen
+.idea/**
+target/
