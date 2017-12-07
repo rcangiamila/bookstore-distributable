@@ -27,10 +27,11 @@
 -- Table structure for table `Address`
 --
 
-DROP TABLE IF EXISTS `Address`;
+-- DROP TABLE IF EXISTS `Address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Address` (
+-- CREATE TABLE `Address` (
+CREATE TABLE IF NOT EXISTS `Address` (
   `id` int(11) NOT NULL,
   `city` varchar(255) DEFAULT NULL,
   `country` varchar(255) DEFAULT NULL,
@@ -56,10 +57,11 @@ UNLOCK TABLES;
 -- Table structure for table `CatalogItem`
 --
 
-DROP TABLE IF EXISTS `CatalogItem`;
+-- DROP TABLE IF EXISTS `CatalogItem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `CatalogItem` (
+-- CREATE TABLE `CatalogItem` (
+CREATE TABLE IF NOT EXISTS `CatalogItem` (
   `id` int(11) NOT NULL,
   `author` varchar(255) DEFAULT NULL,
   `category` varchar(255) DEFAULT NULL,
@@ -79,7 +81,8 @@ CREATE TABLE `CatalogItem` (
 
 LOCK TABLES `CatalogItem` WRITE;
 /*!40000 ALTER TABLE `CatalogItem` DISABLE KEYS */;
-INSERT INTO `CatalogItem` VALUES (1,'Lt. Howard Payson','military','description 1','/images/books/BoyScouts.jpg',1,45.00,'ABC123','The Boy Scouts at the Panama-Pacific Exposition'),(2,'Unknown','children','description 2','/images/books/3LittleKittens.jpg',0,15.00,'DEF456','The 3 Little Kittens'),(3,'Beatrix Potter','children','description 3','/images/books/JemimaPuddleDuck.jpg',1,25.00,'GHI789','The Tale of Jemima Puddle Duck'),(4,'Waldemar Bonsels','children','description 4','/images/books/AdventuresOfMayaTheBee.jpg',0,23.00,'123132','The Adventures of Maya the Bee'),(5,'Sunzi','military','description 5','/images/books/art-of-war-sunzi-lionel-giles.jpg',0,20.00,'45678','The Art of War'),(6,'Rafael Sabatini','children','description 6','/images/books/CaptainBlood.jpg',0,22.95,'45679','Captain Blood'),(7,'Robert Brent','crafts','description 7','/images/books/ChemistryExperiments.png',0,32.95,'45680','The Golden Book of Chemistry Experiments'),(8,'Eleanor M. Ingram','children','description 8','/images/books/coverthingfromthelake.jpg',0,25.95,'45681','The Thing from the Lake'),(9,'Flora Klickmann','crafts','description 9','/images/books/CraftOfCrochet.jpg',0,35.95,'45682','The Craft of Crochet Hook'),(10,'Charles Robert Dumas','children','description 10','/images/books/Design-Book-cover-Juvenile-Contes-Mauves.jpg',0,45.95,'45683','Contes Mauves de ma Mere-Grand'),(11,'Joseph Jacobs','children','description 11','/images/books/EnglishFairyTales.jpg',0,25.95,'45684','English Fairy Tales'),(12,'Flora Klickmann','crafts','description 12','/images/books/FancyStitchery.jpg',0,45.95,'45685','The Home Art Book of Fancy Stitchery'),(13,'Lela Nargi','crafts','description 13','/images/books/FarmersWifeCanning.jpg',0,20.95,'45686','The Farmer\'s Wife Canning and Preserving Cookbook'),(14,'Flora Kickmann','crafts','description 14','/images/books/HomeArtCrochet.jpg',0,15.95,'45687','The Home Art of Crochet Book'),(15,'Three Initiates','crafts','description 15','/images/books/LeKybalion.jpg',0,30.95,'45688','Le Kybalion'),(16,'Jane Eayre Fryer','children','description 16','/images/books/MaryFrancesGarden.jpg',0,40.95,'45689','The Mary Frances Garden Book'),(17,'Jane Eayre Fryer','children','description 17','/images/books/MaryFrancesHousekeeper.jpg',0,55.95,'45690','The Mary Frances Housekeeper'),(18,'Religious Tract Society','children','description 18','/images/books/NewAlphabet.jpg',0,22.95,'45691','My New Alphabet Book'),(19,'Beatrix Potter','children','description 19','/images/books/PeterRabbit.png',0,14.95,'45691','The Tale of Peter Rabbit'),(20,'Unknown','comics','expensive sucker','/images/books/CameraComics.jpg',0,195.00,'45677','Camera Comics'),(21,'Unknown','comics','expensive sucker','/images/books/PoliceCases.jpg',0,200.00,'45692','Authentic Police Cases'),(22,'G.Griffin Lewis','crafts','description 20','/images/books/PracticalBookOfOrientalRugs.jpg',0,205.00,'45693','The Practical Book of Oriental Rugs'),(23,'Priscilla Publishing Co.','crafts','description 21','/images/books/PriscillaCrochetBook.jpg',0,40.00,'45694','Priscilla Juniors\' Crochet Book'),(24,'Tony Laidig','crafts','description 22','/images/books/PublicDomainCodeBook.jpg',1,25.00,'45695','The Public Domain Code Book'),(25,'Thornton W. Burgess','children','description 23','/images/books/ReddyFox.jpg',1,10.95,'45696','The Adventures of Reddy Fox'),(26,'Wallace Wattles','crafts','description 24','/images/books/ScienceOfGettingRich.jpg',1,5.95,'45697','The Science of Getting Rich'),(27,'Arthur Conan Doyle','children','description 25','/images/books/SherlockHolmes.jpg',1,20.95,'45698','The Casebook of Sherlock Holmes'),(28,'Laura Lee Hope','children','description 26','/images/books/StuffedElephant.jpg',1,10.95,'45698','The Story of a Stuffed Elephant'),(29,'DC Comics','comics','description 27','/images/books/SuperGirl.jpg',1,4.95,'45699','Supergirl'),(30,'Beatrix Potter','children','description 28','/images/books/TaleOfPiglingBland.jpg',1,14.95,'45600','The Tale of Pigling Bland'),(31,'Grace McCleen','crafts','description 29','/images/books/The-Offering-lg.jpg',1,12.95,'45601','The Offering'),(32,'Brian Fagan','crafts','description 30','/images/books/TimeDetectives.jpg',1,22.95,'45602','Time Detectives'),(33,'Starr Flagg','comics','description 31','/images/books/UndercoverGirl.jpg',0,220.95,'45603','Undercover Girl'),(34,'Andrew Lang','children','description 32','/images/books/YellowFairy.jpg',1,22.95,'45604','The Yellow Fairy Book');
+-- INSERT INTO `CatalogItem` VALUES (1,'Lt. Howard Payson','military','description 1','/images/books/BoyScouts.jpg',1,45.00,'ABC123','The Boy Scouts at the Panama-Pacific Exposition'),(2,'Unknown','children','description 2','/images/books/3LittleKittens.jpg',0,15.00,'DEF456','The 3 Little Kittens'),(3,'Beatrix Potter','children','description 3','/images/books/JemimaPuddleDuck.jpg',1,25.00,'GHI789','The Tale of Jemima Puddle Duck'),(4,'Waldemar Bonsels','children','description 4','/images/books/AdventuresOfMayaTheBee.jpg',0,23.00,'123132','The Adventures of Maya the Bee'),(5,'Sunzi','military','description 5','/images/books/art-of-war-sunzi-lionel-giles.jpg',0,20.00,'45678','The Art of War'),(6,'Rafael Sabatini','children','description 6','/images/books/CaptainBlood.jpg',0,22.95,'45679','Captain Blood'),(7,'Robert Brent','crafts','description 7','/images/books/ChemistryExperiments.png',0,32.95,'45680','The Golden Book of Chemistry Experiments'),(8,'Eleanor M. Ingram','children','description 8','/images/books/coverthingfromthelake.jpg',0,25.95,'45681','The Thing from the Lake'),(9,'Flora Klickmann','crafts','description 9','/images/books/CraftOfCrochet.jpg',0,35.95,'45682','The Craft of Crochet Hook'),(10,'Charles Robert Dumas','children','description 10','/images/books/Design-Book-cover-Juvenile-Contes-Mauves.jpg',0,45.95,'45683','Contes Mauves de ma Mere-Grand'),(11,'Joseph Jacobs','children','description 11','/images/books/EnglishFairyTales.jpg',0,25.95,'45684','English Fairy Tales'),(12,'Flora Klickmann','crafts','description 12','/images/books/FancyStitchery.jpg',0,45.95,'45685','The Home Art Book of Fancy Stitchery'),(13,'Lela Nargi','crafts','description 13','/images/books/FarmersWifeCanning.jpg',0,20.95,'45686','The Farmer\'s Wife Canning and Preserving Cookbook'),(14,'Flora Kickmann','crafts','description 14','/images/books/HomeArtCrochet.jpg',0,15.95,'45687','The Home Art of Crochet Book'),(15,'Three Initiates','crafts','description 15','/images/books/LeKybalion.jpg',0,30.95,'45688','Le Kybalion'),(16,'Jane Eayre Fryer','children','description 16','/images/books/MaryFrancesGarden.jpg',0,40.95,'45689','The Mary Frances Garden Book'),(17,'Jane Eayre Fryer','children','description 17','/images/books/MaryFrancesHousekeeper.jpg',0,55.95,'45690','The Mary Frances Housekeeper'),(18,'Religious Tract Society','children','description 18','/images/books/NewAlphabet.jpg',0,22.95,'45691','My New Alphabet Book'),(19,'Beatrix Potter','children','description 19','/images/books/PeterRabbit.png',0,14.95,'45691','The Tale of Peter Rabbit'),(20,'Unknown','comics','expensive sucker','/images/books/CameraComics.jpg',0,195.00,'45677','Camera Comics'),(21,'Unknown','comics','expensive sucker','/images/books/PoliceCases.jpg',0,200.00,'45692','Authentic Police Cases'),(22,'G.Griffin Lewis','crafts','description 20','/images/books/PracticalBookOfOrientalRugs.jpg',0,205.00,'45693','The Practical Book of Oriental Rugs'),(23,'Priscilla Publishing Co.','crafts','description 21','/images/books/PriscillaCrochetBook.jpg',0,40.00,'45694','Priscilla Juniors\' Crochet Book'),(24,'Tony Laidig','crafts','description 22','/images/books/PublicDomainCodeBook.jpg',1,25.00,'45695','The Public Domain Code Book'),(25,'Thornton W. Burgess','children','description 23','/images/books/ReddyFox.jpg',1,10.95,'45696','The Adventures of Reddy Fox'),(26,'Wallace Wattles','crafts','description 24','/images/books/ScienceOfGettingRich.jpg',1,5.95,'45697','The Science of Getting Rich'),(27,'Arthur Conan Doyle','children','description 25','/images/books/SherlockHolmes.jpg',1,20.95,'45698','The Casebook of Sherlock Holmes'),(28,'Laura Lee Hope','children','description 26','/images/books/StuffedElephant.jpg',1,10.95,'45698','The Story of a Stuffed Elephant'),(29,'DC Comics','comics','description 27','/images/books/SuperGirl.jpg',1,4.95,'45699','Supergirl'),(30,'Beatrix Potter','children','description 28','/images/books/TaleOfPiglingBland.jpg',1,14.95,'45600','The Tale of Pigling Bland'),(31,'Grace McCleen','crafts','description 29','/images/books/The-Offering-lg.jpg',1,12.95,'45601','The Offering'),(32,'Brian Fagan','crafts','description 30','/images/books/TimeDetectives.jpg',1,22.95,'45602','Time Detectives'),(33,'Starr Flagg','comics','description 31','/images/books/UndercoverGirl.jpg',0,220.95,'45603','Undercover Girl'),(34,'Andrew Lang','children','description 32','/images/books/YellowFairy.jpg',1,22.95,'45604','The Yellow Fairy Book');
+INSERT IGNORE INTO `CatalogItem` VALUES (1,'Lt. Howard Payson','military','description 1','/images/books/BoyScouts.jpg',1,45.00,'ABC123','The Boy Scouts at the Panama-Pacific Exposition'),(2,'Unknown','children','description 2','/images/books/3LittleKittens.jpg',0,15.00,'DEF456','The 3 Little Kittens'),(3,'Beatrix Potter','children','description 3','/images/books/JemimaPuddleDuck.jpg',1,25.00,'GHI789','The Tale of Jemima Puddle Duck'),(4,'Waldemar Bonsels','children','description 4','/images/books/AdventuresOfMayaTheBee.jpg',0,23.00,'123132','The Adventures of Maya the Bee'),(5,'Sunzi','military','description 5','/images/books/art-of-war-sunzi-lionel-giles.jpg',0,20.00,'45678','The Art of War'),(6,'Rafael Sabatini','children','description 6','/images/books/CaptainBlood.jpg',0,22.95,'45679','Captain Blood'),(7,'Robert Brent','crafts','description 7','/images/books/ChemistryExperiments.png',0,32.95,'45680','The Golden Book of Chemistry Experiments'),(8,'Eleanor M. Ingram','children','description 8','/images/books/coverthingfromthelake.jpg',0,25.95,'45681','The Thing from the Lake'),(9,'Flora Klickmann','crafts','description 9','/images/books/CraftOfCrochet.jpg',0,35.95,'45682','The Craft of Crochet Hook'),(10,'Charles Robert Dumas','children','description 10','/images/books/Design-Book-cover-Juvenile-Contes-Mauves.jpg',0,45.95,'45683','Contes Mauves de ma Mere-Grand'),(11,'Joseph Jacobs','children','description 11','/images/books/EnglishFairyTales.jpg',0,25.95,'45684','English Fairy Tales'),(12,'Flora Klickmann','crafts','description 12','/images/books/FancyStitchery.jpg',0,45.95,'45685','The Home Art Book of Fancy Stitchery'),(13,'Lela Nargi','crafts','description 13','/images/books/FarmersWifeCanning.jpg',0,20.95,'45686','The Farmer\'s Wife Canning and Preserving Cookbook'),(14,'Flora Kickmann','crafts','description 14','/images/books/HomeArtCrochet.jpg',0,15.95,'45687','The Home Art of Crochet Book'),(15,'Three Initiates','crafts','description 15','/images/books/LeKybalion.jpg',0,30.95,'45688','Le Kybalion'),(16,'Jane Eayre Fryer','children','description 16','/images/books/MaryFrancesGarden.jpg',0,40.95,'45689','The Mary Frances Garden Book'),(17,'Jane Eayre Fryer','children','description 17','/images/books/MaryFrancesHousekeeper.jpg',0,55.95,'45690','The Mary Frances Housekeeper'),(18,'Religious Tract Society','children','description 18','/images/books/NewAlphabet.jpg',0,22.95,'45691','My New Alphabet Book'),(19,'Beatrix Potter','children','description 19','/images/books/PeterRabbit.png',0,14.95,'45691','The Tale of Peter Rabbit'),(20,'Unknown','comics','expensive sucker','/images/books/CameraComics.jpg',0,195.00,'45677','Camera Comics'),(21,'Unknown','comics','expensive sucker','/images/books/PoliceCases.jpg',0,200.00,'45692','Authentic Police Cases'),(22,'G.Griffin Lewis','crafts','description 20','/images/books/PracticalBookOfOrientalRugs.jpg',0,205.00,'45693','The Practical Book of Oriental Rugs'),(23,'Priscilla Publishing Co.','crafts','description 21','/images/books/PriscillaCrochetBook.jpg',0,40.00,'45694','Priscilla Juniors\' Crochet Book'),(24,'Tony Laidig','crafts','description 22','/images/books/PublicDomainCodeBook.jpg',1,25.00,'45695','The Public Domain Code Book'),(25,'Thornton W. Burgess','children','description 23','/images/books/ReddyFox.jpg',1,10.95,'45696','The Adventures of Reddy Fox'),(26,'Wallace Wattles','crafts','description 24','/images/books/ScienceOfGettingRich.jpg',1,5.95,'45697','The Science of Getting Rich'),(27,'Arthur Conan Doyle','children','description 25','/images/books/SherlockHolmes.jpg',1,20.95,'45698','The Casebook of Sherlock Holmes'),(28,'Laura Lee Hope','children','description 26','/images/books/StuffedElephant.jpg',1,10.95,'45698','The Story of a Stuffed Elephant'),(29,'DC Comics','comics','description 27','/images/books/SuperGirl.jpg',1,4.95,'45699','Supergirl'),(30,'Beatrix Potter','children','description 28','/images/books/TaleOfPiglingBland.jpg',1,14.95,'45600','The Tale of Pigling Bland'),(31,'Grace McCleen','crafts','description 29','/images/books/The-Offering-lg.jpg',1,12.95,'45601','The Offering'),(32,'Brian Fagan','crafts','description 30','/images/books/TimeDetectives.jpg',1,22.95,'45602','Time Detectives'),(33,'Starr Flagg','comics','description 31','/images/books/UndercoverGirl.jpg',0,220.95,'45603','Undercover Girl'),(34,'Andrew Lang','children','description 32','/images/books/YellowFairy.jpg',1,22.95,'45604','The Yellow Fairy Book');
 /*!40000 ALTER TABLE `CatalogItem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,10 +90,11 @@ UNLOCK TABLES;
 -- Table structure for table `Contact`
 --
 
-DROP TABLE IF EXISTS `Contact`;
+-- DROP TABLE IF EXISTS `Contact`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Contact` (
+-- CREATE TABLE `Contact` (
+CREATE TABLE IF NOT EXISTS `Contact` (
   `id` int(11) NOT NULL,
   `answered` tinyint(1) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -113,10 +117,11 @@ UNLOCK TABLES;
 -- Table structure for table `Customer`
 --
 
-DROP TABLE IF EXISTS `Customer`;
+-- DROP TABLE IF EXISTS `Customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Customer` (
+-- CREATE TABLE `Customer` (
+CREATE TABLE IF NOT EXISTS `Customer` (
   `id` int(11) NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -140,7 +145,8 @@ CREATE TABLE `Customer` (
 
 LOCK TABLES `Customer` WRITE;
 /*!40000 ALTER TABLE `Customer` DISABLE KEYS */;
-INSERT INTO `Customer` VALUES (35,0,'jdoe@doe.com','John','Doe','redhat','jdoe',NULL,NULL),(36,0,'guest@doe.com','Guest','User','user','guest',NULL,NULL),(37,1,'admin@bookshop.com','Admin','User','redhat','admin',NULL,NULL);
+-- INSERT INTO `Customer` VALUES (35,0,'jdoe@doe.com','John','Doe','redhat','jdoe',NULL,NULL),(36,0,'guest@doe.com','Guest','User','user','guest',NULL,NULL),(37,1,'admin@bookshop.com','Admin','User','redhat','admin',NULL,NULL);
+INSERT IGNORE INTO `Customer` VALUES (35,0,'jdoe@doe.com','John','Doe','redhat','jdoe',NULL,NULL),(36,0,'guest@doe.com','Guest','User','user','guest',NULL,NULL),(37,1,'admin@bookshop.com','Admin','User','redhat','admin',NULL,NULL);
 /*!40000 ALTER TABLE `Customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,10 +154,11 @@ UNLOCK TABLES;
 -- Table structure for table `OrderItem`
 --
 
-DROP TABLE IF EXISTS `OrderItem`;
+-- DROP TABLE IF EXISTS `OrderItem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `OrderItem` (
+-- CREATE TABLE `OrderItem` (
+CREATE TABLE IF NOT EXISTS `OrderItem` (
   `id` int(11) NOT NULL,
   `extPrice` decimal(19,2) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
@@ -178,10 +185,11 @@ UNLOCK TABLES;
 -- Table structure for table `Payment`
 --
 
-DROP TABLE IF EXISTS `Payment`;
+-- DROP TABLE IF EXISTS `Payment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Payment` (
+-- CREATE TABLE `Payment` (
+CREATE TABLE IF NOT EXISTS `Payment` (
   `id` int(11) NOT NULL,
   `expireMonth` varchar(255) NOT NULL,
   `expireYear` varchar(255) NOT NULL,
@@ -205,10 +213,11 @@ UNLOCK TABLES;
 -- Table structure for table `Promotion`
 --
 
-DROP TABLE IF EXISTS `Promotion`;
+-- DROP TABLE IF EXISTS `Promotion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Promotion` (
+-- CREATE TABLE `Promotion` (
+CREATE TABLE IF NOT EXISTS `Promotion` (
   `id` int(11) NOT NULL,
   `code` varchar(255) DEFAULT NULL,
   `percent` int(11) DEFAULT NULL,
@@ -226,7 +235,8 @@ CREATE TABLE `Promotion` (
 
 LOCK TABLES `Promotion` WRITE;
 /*!40000 ALTER TABLE `Promotion` DISABLE KEYS */;
-INSERT INTO `Promotion` VALUES (38,'kid10',10,1,NULL),(39,'big61',50,1,NULL);
+-- INSERT INTO `Promotion` VALUES (38,'kid10',10,1,NULL),(39,'big61',50,1,NULL);
+INSERT IGNORE INTO `Promotion` VALUES (38,'kid10',10,1,NULL),(39,'big61',50,1,NULL);
 /*!40000 ALTER TABLE `Promotion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,10 +244,11 @@ UNLOCK TABLES;
 -- Table structure for table `UserToken`
 --
 
-DROP TABLE IF EXISTS `UserToken`;
+-- DROP TABLE IF EXISTS `UserToken`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `UserToken` (
+-- CREATE TABLE `UserToken` (
+CREATE TABLE IF NOT EXISTS `UserToken` (
   `id` int(11) NOT NULL,
   `token` varchar(255) DEFAULT NULL,
   `customer_id` int(11) DEFAULT NULL,
@@ -260,10 +271,11 @@ UNLOCK TABLES;
 -- Table structure for table `WishList`
 --
 
-DROP TABLE IF EXISTS `WishList`;
+-- DROP TABLE IF EXISTS `WishList`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `WishList` (
+-- CREATE TABLE `WishList` (
+CREATE TABLE IF NOT EXISTS `WishList` (
   `id` int(11) NOT NULL,
   `cust_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -285,10 +297,11 @@ UNLOCK TABLES;
 -- Table structure for table `WishListItem`
 --
 
-DROP TABLE IF EXISTS `WishListItem`;
+-- DROP TABLE IF EXISTS `WishListItem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `WishListItem` (
+-- CREATE TABLE `WishListItem` (
+CREATE TABLE IF NOT EXISTS `WishListItem` (
   `id` int(11) NOT NULL,
   `item_id` int(11) DEFAULT NULL,
   `wishitem_id` int(11) DEFAULT NULL,
@@ -313,10 +326,11 @@ UNLOCK TABLES;
 -- Table structure for table `hibernate_sequence`
 --
 
-DROP TABLE IF EXISTS `hibernate_sequence`;
+-- DROP TABLE IF EXISTS `hibernate_sequence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `hibernate_sequence` (
+-- CREATE TABLE `hibernate_sequence` (
+CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
   `next_val` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -327,7 +341,8 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (40);
+-- INSERT INTO `hibernate_sequence` VALUES (40);
+INSERT IGNORE INTO `hibernate_sequence` VALUES (40);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -335,10 +350,11 @@ UNLOCK TABLES;
 -- Table structure for table `order_`
 --
 
-DROP TABLE IF EXISTS `order_`;
+-- DROP TABLE IF EXISTS `order_`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `order_` (
+-- CREATE TABLE `order_` (
+CREATE TABLE IF NOT EXISTS `order_` (
   `id` int(11) NOT NULL,
   `delivered` tinyint(1) DEFAULT NULL,
   `discount` decimal(19,2) DEFAULT NULL,
